@@ -1,0 +1,217 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 11439
+License: Customer
+
+Current time: 	Fri Nov 07 14:15:24 CST 2025
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 9.6 (Plow)
+OS Version: 5.14.0-570.19.1.el9_6.x86_64
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :100
+Screen size: 1800x1126
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	shivansh
+User home directory: /home/shivansh
+User working directory: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado
+User country: 	null
+User language: 	en
+User locale: 	en
+
+RDI_BASEROOT: /remote/Xilinx/2020.1/Vivado
+HDI_APPROOT: /remote/Xilinx/2020.1/Vivado/2020.1
+RDI_DATADIR: /remote/Xilinx/2020.1/Vivado/2020.1/data
+RDI_BINDIR: /remote/Xilinx/2020.1/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/shivansh/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/shivansh/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/shivansh/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/remote/Xilinx/2020.1/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/vivado.log
+Vivado journal file location: 	/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-11439-linuxvdi-f25-31.ece.iastate.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_SDK: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VITIS: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VIVADO: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_VIVADO_HLS: /remote/Xilinx/2020.1/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,280 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,280 MB. GUI used memory: 59 MB. Current time: 11/7/25, 2:15:25 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aA
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 211, 113); // dT (ae, cs)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 219, 83); // dT (ae, cs)
+// Tcl Command: 'rdi::info_commands {s*}'
+// Elapsed time: 14 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source tc_staged_mac_ip.tcl", true); // aF (ac, cs)
+// Tcl Command: 'source tc_staged_mac_ip.tcl'
+// Tcl Command: 'source tc_staged_mac_ip.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source tc_staged_mac_ip.tcl 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 115 MB (+117623kb) [00:00:54]
+// [Engine Memory]: 1,305 MB (+1217145kb) [00:00:54]
+// [GUI Memory]: 130 MB (+9697kb) [00:00:54]
+// WARNING: HEventQueue.dispatchEvent() is taking  1754 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,333 MB. GUI used memory: 70 MB. Current time: 11/7/25, 2:16:10 PM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: BOARD_MODIFIED
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PROJECT_DASHBOARD_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 7179.602 ; gain = 28.969 ; free physical = 7417 ; free virtual = 19179 
+// Tcl Message: # set proj_dir [get_property directory [current_project]] # set obj [current_project] # set_property -name "board_part" -value "em.avnet.com:zed:part0:1.4" -objects $obj # set_property -name "board_part_repo_paths" -value "[file normalize "$origin_dir/../../../../cpre480/MP-1/hw/board"]" -objects $obj 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac'. 
+// Tcl Message: INFO: Project created:tc_staged_mac 
+// Elapsed time: 14 seconds
+dismissDialog("Tcl Command Line"); // bz (cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false, false, false, false, false, true); // B (F, cs) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 2); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 2); // B (F, cs)
+// [Engine Memory]: 1,371 MB (+773kb) [00:01:31]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 842 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 1); // m (l, cs)
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (ds, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,389 MB. GUI used memory: 74 MB. Current time: 11/7/25, 2:30:50 PM CST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "staged_mac.vhd", 1); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: Xilinx tc_staged_mac tc_staged_mac_ip.tcl vivado.jou vivado.log vivado_pid11439.str 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls ..", true); // aF (ac, cs)
+// Tcl Command: 'ls ..'
+// Tcl Command: 'ls ..'
+// Tcl Message: ls .. 
+// Tcl Message: component.xml hdl tb vivado xgui 
+// Tcl Command: 'rdi::info_commands {ls*}'
+// Elapsed time: 13 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "../tb/do/staged_mac_tb.do", true); // aF (ac, cs)
+// Tcl Command: '../tb/do/staged_mac_tb.do'
+// Tcl Command: '../tb/do/staged_mac_tb.do'
+// Tcl Message: ../tb/do/staged_mac_tb.do 
+// Tcl Message: invalid command name "../tb/do/staged_mac_tb.do" 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd ..", true); // aF (ac, cs)
+// Tcl Command: 'cd ..'
+// Tcl Command: 'cd ..'
+// Tcl Message: cd .. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: component.xml hdl tb vivado xgui 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd tb", true); // aF (ac, cs)
+// Tcl Command: 'cd tb'
+// Tcl Command: 'cd tb'
+// Tcl Message: cd tb 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd do", true); // aF (ac, cs)
+// Tcl Command: 'cd do'
+// Tcl Command: 'cd do'
+// Tcl Message: cd do 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: staged_mac_tb.do 
+// Tcl Command: 'rdi::info_commands {staged*}'
+// Tcl Command: 'rdi::info_commands {staged_mac*}'
+// Tcl Command: 'rdi::info_commands {staged_mac_*}'
+// Tcl Command: 'rdi::info_commands {staged_mac_tb*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "staged_mac_tb.do", true); // aF (ac, cs)
+// Tcl Command: 'staged_mac_tb.do'
+// Tcl Command: 'staged_mac_tb.do'
+// Tcl Message: staged_mac_tb.do 
+// Tcl Message: invalid command name "staged_mac_tb.do" 
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Elapsed time: 32 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source staged_mac_tb.do", true); // aF (ac, cs)
+// Tcl Command: 'source staged_mac_tb.do'
+// Tcl Command: 'source staged_mac_tb.do'
+// bz (cs):  Tcl Command Line : addNotify
+// Tcl Message: source staged_mac_tb.do 
+// Tcl Message: # force sim:/staged_mac/ACLK 1 0, 0 {5 ps} -r 10 
+// Tcl Message: invalid command name "force"     while executing "force sim:/staged_mac/ACLK 1 0, 0 {5 ps} -r 10"     (file "staged_mac_tb.do" line 1) 
+dismissDialog("Tcl Command Line"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,397 MB. GUI used memory: 74 MB. Current time: 11/7/25, 3:00:50 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,397 MB. GUI used memory: 63 MB. Current time: 11/7/25, 3:30:50 PM CST

@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 10 12:15:48 2025
+# Process ID: 8733
+# Current directory: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl
+# Command line: vivado
+# Log file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.log
+# Journal file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source tc_staged_mac_ip.tcl
+ls
+source piped_mac_tb.tcl
+open_project /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/hdl/piped_mac.vhd
+update_compile_order -fileset sources_1
+ls
+cd ..
+ls
+cd ..
+cd ..
+ls
+source piped_mac/tb/tcl/piped_mac_tb.tcl
+launch_simulation
+source staged_mac.tcl
+source piped_mac/tb/tcl/piped_mac_tb.tcl
+close_sim
+launch_simulation
+source staged_mac.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top piped_mac [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source staged_mac.tcl
+source piped_mac/tb/tcl/piped_mac_tb.tcl
+source piped_mac/tb/tcl/piped_mac_tb.tcl

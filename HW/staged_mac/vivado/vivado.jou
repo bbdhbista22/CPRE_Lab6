@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Nov  8 00:18:14 2025
+# Process ID: 35306
+# Current directory: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado
+# Command line: vivado
+# Log file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/vivado.log
+# Journal file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name Staged_MAC_timing
+report_utilization -file /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/utilization_report.txt -name utilization_1

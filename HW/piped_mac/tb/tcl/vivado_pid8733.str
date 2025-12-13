@@ -1,0 +1,884 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 8733
+License: Customer
+
+Current time: 	Mon Nov 10 12:16:01 CST 2025
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 9.6 (Plow)
+OS Version: 5.14.0-570.19.1.el9_6.x86_64
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: :1
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/remote/Xilinx/2020.1/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	shivansh
+User home directory: /home/shivansh
+User working directory: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl
+User country: 	null
+User language: 	en
+User locale: 	en
+
+RDI_BASEROOT: /remote/Xilinx/2020.1/Vivado
+HDI_APPROOT: /remote/Xilinx/2020.1/Vivado/2020.1
+RDI_DATADIR: /remote/Xilinx/2020.1/Vivado/2020.1/data
+RDI_BINDIR: /remote/Xilinx/2020.1/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/shivansh/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/shivansh/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/shivansh/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/remote/Xilinx/2020.1/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.log
+Vivado journal file location: 	/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-8733-co2050-22.ece.iastate.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /remote/Xilinx/2020.1/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_SDK: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VITIS: /remote/Xilinx/2020.1/Vitis/2020.1
+XILINX_VIVADO: /remote/Xilinx/2020.1/Vivado/2020.1
+XILINX_VIVADO_HLS: /remote/Xilinx/2020.1/Vivado/2020.1
+
+
+GUI allocated memory:	242 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,549 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,524 MB. GUI used memory: 63 MB. Current time: 11/10/25, 12:16:02 PM CST
+// Tcl Command: 'rdi::info_commands {s*}'
+// Tcl Command: 'rdi::info_commands {sour*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source tc_staged_mac_ip.tcl", true); // aF (ac, cs)
+// Tcl Command: 'source tc_staged_mac_ip.tcl'
+// Tcl Command: 'source tc_staged_mac_ip.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// Tcl Message: source tc_staged_mac_ip.tcl 
+// Tcl Message: couldn't read file "tc_staged_mac_ip.tcl": no such file or directory 
+dismissDialog("Tcl Command Line"); // bz (cs)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: piped_mac_tb.tcl vivado.jou vivado.log vivado_pid8733.str 
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands {source*}'
+// Elapsed time: 10 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac_tb.tcl", true); // aF (ac, cs)
+// Tcl Command: 'source piped_mac_tb.tcl'
+// Tcl Command: 'source piped_mac_tb.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: source piped_mac_tb.tcl 
+// Tcl Message: # relaunch_sim 
+// Tcl Message: INFO: [Common 17-17] undo 'relaunch_sim' INFO: [Common 17-17] undo 'relaunch_sim' 
+// Tcl Message: ERROR: [Simulator 45-6] No active Vivado Simulator simulation.  To use this command you must first start a simulation using Vivado Simulator. 
+dismissDialog("Tcl Command Line"); // bz (cs)
+// Elapsed time: 16 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y (x, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 26 seconds
+setFileChooser("/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr");
+// [GUI Memory]: 129 MB (+132461kb) [00:01:12]
+// [Engine Memory]: 1,534 MB (+1457416kb) [00:01:12]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac'. 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1310 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'. 
+// Project name: tc_staged_mac; location: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac; part: xc7z020clg484-1
+// 'i' command handler elapsed time: 31 seconds
+// Tcl Message: open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 7353.055 ; gain = 27.238 ; free physical = 23208 ; free virtual = 42462 
+dismissDialog("Open Project"); // bz (cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (F, cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,593 MB. GUI used memory: 75 MB. Current time: 11/10/25, 12:17:17 PM CST
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 12 seconds
+setFileChooser("/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/hdl/piped_mac.vhd");
+// Elapsed time: 50 seconds
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 68 seconds
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/hdl/piped_mac.vhd 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,615 MB (+3714kb) [00:02:36]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,615 MB. GUI used memory: 76 MB. Current time: 11/10/25, 12:18:32 PM CST
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+// Elapsed time: 26 seconds
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,635 MB. GUI used memory: 78 MB. Current time: 11/10/25, 12:19:07 PM CST
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false); // B (F, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false); // B (F, cs)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aL (aI, cs)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: piped_mac_tb.tcl vivado.jou vivado.log vivado_pid8733.str 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd ..", true); // aF (ac, cs)
+// Tcl Command: 'cd ..'
+// Tcl Command: 'cd ..'
+// Tcl Message: cd .. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: do tcl 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd ..", true); // aF (ac, cs)
+// Tcl Command: 'cd ..'
+// Tcl Command: 'cd ..'
+// Tcl Message: cd .. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd ..", true); // aF (ac, cs)
+// Tcl Command: 'cd ..'
+// Tcl Command: 'cd ..'
+// Tcl Message: cd .. 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: lab6_template mlp_conv mlp_system piped_mac simple_interface staged_mac 
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Elapsed time: 15 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/", true); // aF (ac, cs)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/piped_mac_tb.tcl"); // aF (ac, cs)
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// Tcl Message: source piped_mac/tb/tcl/piped_mac_tb.tcl 
+// Tcl Message: # relaunch_sim 
+// Tcl Message: INFO: [Common 17-17] undo 'relaunch_sim' INFO: [Common 17-17] undo 'relaunch_sim' 
+// Tcl Message: ERROR: [Simulator 45-6] No active Vivado Simulator simulation.  To use this command you must first start a simulation using Vivado Simulator. 
+dismissDialog("Tcl Command Line"); // bz (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, staged_mac(behavioral) (staged_mac.vhd)]", 1, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (J, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj staged_mac_vhdl.prj INFO: [VRFC 10-163] Analyzing VHDL file "/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/hdl/staged_mac.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'staged_mac' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:  ****** Webtalk v2020.1 (64-bit)   **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020   **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.  source /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim/xsim.dir/staged_mac_behav/webtalk/xsim_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Mon Nov 10 12:20:04 2025... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [GUI Memory]: 139 MB (+4390kb) [00:04:10]
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,699 MB. GUI used memory: 84 MB. Current time: 11/10/25, 12:20:06 PM CST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 1,722 MB (+27415kb) [00:04:11]
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source staged_mac.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7638.992 ; gain = 218.895 ; free physical = 23013 ; free virtual = 42391 
+// 'd' command handler elapsed time: 6 seconds
+dismissDialog("Run Simulation"); // e (cs)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 20 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/piped_mac_tb.tcl", true); // aF (ac, cs)
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE
+// Tcl Message: source piped_mac/tb/tcl/piped_mac_tb.tcl 
+// Tcl Message: # relaunch_sim 
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_MODEL_RELOADED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,678 MB. GUI used memory: 86 MB. Current time: 11/10/25, 12:20:28 PM CST
+// TclEventType: SIMULATION_MODEL_RELOADED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: Command: launch_simulation -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: xvhdl --incr --relax -prj staged_mac_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds 
+// Tcl Message: Command: launch_simulation -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log Vivado Simulator 2020.1 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log  Using 8 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_MODEL_RELOADED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_DELETE_ALL_BREAKPOINTS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: # add_force {/piped_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps 
+// Tcl Message: ERROR: [Simtcl 6-8] No such HDL object /piped_mac/ACLK 
+dismissDialog("Tcl Command Line"); // bz (cs)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 306 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 378, 57); // dT (ae, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 363, 66); // dT (ae, cs)
+// Tcl Command: 'rdi::info_commands {sour*}'
+// Tcl Command: 'rdi::info_commands {soure*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Elapsed time: 13 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aF (ac, cs)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "staged_mac ; staged_mac(behavioral) ; VHDL Entity", 0, "staged_mac(behavioral)", 1, false); // c (c, cs)
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (J, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bz (cs):  Close : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (v, B)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// e (cs):  Run Simulation : addNotify
+dismissDialog("Close"); // bz (cs)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj staged_mac_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log Vivado Simulator 2020.1 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log  Using 8 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,708 MB. GUI used memory: 88 MB. Current time: 11/10/25, 12:26:24 PM CST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source staged_mac.tcl 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (cs)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_RUN, "Run"); // aa (q, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RELAUNCH, "Relaunch Simulation"); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_RUN, "Run"); // aa (q, cs)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cs)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - staged_mac", "DesignTask.SIMULATION");
+// A (cs): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Close : addNotify
+// TclEventType: WAVEFORM_CLOSE_WCFG
+dismissDialog("Confirm Close"); // A (cs)
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bz (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, piped_mac(behavioral) (piped_mac.vhd)]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top piped_mac [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 146 MB (+117kb) [00:11:08]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (J, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cs):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvhdl --incr --relax -prj staged_mac_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log Vivado Simulator 2020.1 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log  Using 8 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,779 MB. GUI used memory: 114 MB. Current time: 11/10/25, 12:27:15 PM CST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source staged_mac.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// 'd' command handler elapsed time: 3 seconds
+dismissDialog("Run Simulation"); // e (cs)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 319, 80); // dT (ae, cs)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 11 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/piped_mac_tb.tcl", true); // aF (ac, cs)
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE
+// Tcl Message: source piped_mac/tb/tcl/piped_mac_tb.tcl 
+// Tcl Message: # relaunch_sim 
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_MODEL_RELOADED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,754 MB. GUI used memory: 142 MB. Current time: 11/10/25, 12:27:29 PM CST
+// TclEventType: SIMULATION_MODEL_RELOADED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: Command: launch_simulation -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: xvhdl --incr --relax -prj staged_mac_vhdl.prj 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds 
+// Tcl Message: Command: launch_simulation -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim' 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log Vivado Simulator 2020.1 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto b85591019463405686cbd00402b71937 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log  Using 8 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds 
+// Tcl Message: Vivado Simulator 2020.1 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_MODEL_RELOADED
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_DELETE_ALL_BREAKPOINTS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: # add_force {/piped_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps 
+// Tcl Message: ERROR: [Simtcl 6-8] No such HDL object /piped_mac/ACLK 
+dismissDialog("Tcl Command Line"); // bz (cs)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 105 MB. Current time: 11/10/25, 12:31:57 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 126 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 94 MB. Current time: 11/10/25, 12:31:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 95 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:00 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:32:01 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 337 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aF (ac, cs)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,794 MB. GUI used memory: 150 MB. Current time: 11/10/25, 12:34:36 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:20 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 94 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 94 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 94 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 40 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 1,849 MB (+43150kb) [00:19:26]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:21 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 94 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 93 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,850 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,850 MB. GUI used memory: 92 MB. Current time: 11/10/25, 12:35:22 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 803 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 391, 58); // dT (ae, cs)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 36, 63); // dT (ae, cs)
+// Elapsed time: 15 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/piped_mac_tb.tcl"); // aF (ac, cs)
+// Elapsed time: 47 seconds
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source piped_mac/tb/tcl/piped_mac_tb.tcl"); // aF (ac, cs)
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// Tcl Command: 'source piped_mac/tb/tcl/piped_mac_tb.tcl'
+// bz (cs):  Tcl Command Line : addNotify
+// TclEventType: SIMULATION_MODEL_ABOUT_TO_CLOSE

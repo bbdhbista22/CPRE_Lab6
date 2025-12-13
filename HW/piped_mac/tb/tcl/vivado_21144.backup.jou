@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 10 12:47:55 2025
+# Process ID: 21144
+# Current directory: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl
+# Command line: vivado
+# Log file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.log
+# Journal file: /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/piped_mac/tb/tcl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/shivansh/cpre_4870/lab3/20250930_CPRE_Lab3/HW/cpre487-587-lab3-main/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source staged_mac.tcl
+close_sim
