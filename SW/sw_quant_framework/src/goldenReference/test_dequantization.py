@@ -116,7 +116,7 @@ def test_basic_dequantization():
     
     for accum, expected, description in test_cases:
         result, stats = dequant.dequantize_scalar(accum)
-        status = "✓ PASS" if result == expected else "✗ FAIL"
+        status = "[PASS] PASS" if result == expected else "[FAIL] FAIL"
         
         if result == expected:
             passed += 1
@@ -175,7 +175,7 @@ def test_saturation():
     
     for accum, expected, description in test_cases:
         result, stats = dequant.dequantize_scalar(accum)
-        status = "✓ PASS" if result == expected else "✗ FAIL"
+        status = "[PASS] PASS" if result == expected else "[FAIL] FAIL"
         
         if result == expected:
             passed += 1
@@ -231,7 +231,7 @@ def test_relu():
     
     for accum, expected, description in test_cases:
         result, stats = dequant.dequantize_scalar(accum)
-        status = "✓ PASS" if result == expected else "✗ FAIL"
+        status = "[PASS] PASS" if result == expected else "[FAIL] FAIL"
         
         if result == expected:
             passed += 1
@@ -283,7 +283,7 @@ def test_vector_operations():
     failed = 0
     
     for i, (accum, exp, result) in enumerate(zip(accums, expected, results)):
-        status = "✓ PASS" if result == exp else "✗ FAIL"
+        status = "[PASS] PASS" if result == exp else "[FAIL] FAIL"
         if result == exp:
             passed += 1
         else:
@@ -311,10 +311,10 @@ def main():
     
     print("=" * 60)
     if all_passed:
-        print("✓ All Dequantization tests PASSED!")
+        print("[PASS] All Dequantization tests PASSED!")
         return 0
     else:
-        print("✗ Some tests FAILED")
+        print("[FAIL] Some tests FAILED")
         return 1
 
 

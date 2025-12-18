@@ -88,7 +88,7 @@ int main() {
         auto all_addresses = gen.generateAllAddresses();
         
         if (gen.verifyAddresses(all_addresses)) {
-            std::cout << "\n All tests PASSED!\n";
+            std::cout << "\n [PASS] All tests PASSED!\n";
             return 0;
         } else {
             std::cout << "\n Verification FAILED!\n";

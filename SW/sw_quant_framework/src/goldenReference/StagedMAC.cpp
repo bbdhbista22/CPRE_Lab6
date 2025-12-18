@@ -26,7 +26,7 @@ StagedMAC::MACResult StagedMAC::executeCycle(int8_t input, int8_t weight, bool s
         current_accumulator_ = 0;
     }
 
-    // Shift pipeline stages (right to left)
+    // Shift pipeline stages and get output
     // Stage 2 (register) output
     MACResult result;
     result.cycle = cycle_count_;
@@ -36,29 +36,23 @@ StagedMAC::MACResult StagedMAC::executeCycle(int8_t input, int8_t weight, bool s
     // Move Stage 1 → Stage 2
     pipeline_[2] = pipeline_[1];
 
-    // Move Stage 0 → Stage 1 (with accumulation)
-    pipeline_[1].partial_sum = pipeline_[0].valid ? pipeline_[0].partial_sum : 0;
-    pipeline_[1].product = pipeline_[0].valid ? pipeline_[0].product : 0;
+    // Accumulate at Stage 1: if Stage 0 has valid data, accumulate its product
     if (pipeline_[0].valid) {
-        pipeline_[1].partial_sum = current_accumulator_ + pipeline_[0].product;
-        current_accumulator_ = pipeline_[1].partial_sum;
+        pipeline_[1].valid = true;
+        current_accumulator_ += pipeline_[0].product;
     }
 
     // New input to Stage 0 (multiply)
-    pipeline_[0].input = input;
-    pipeline_[0].weight = weight;
-    pipeline_[0].valid = true;
-    
     // Multiply (with zero-point adjustment)
     int32_t adj_input = (int32_t)input - config_.zero_point_in;
     int32_t adj_weight = (int32_t)weight - config_.zero_point_weight;
-    pipeline_[0].product = adj_input * adj_weight;
-    
-    // Accumulate at output of stage 0
-    if (pipeline_[0].valid) {
-        // This value will propagate through pipeline
-        pipeline_[0].partial_sum = current_accumulator_;
-    }
+    int32_t product = adj_input * adj_weight;
+
+    pipeline_[0].input = input;
+    pipeline_[0].weight = weight;
+    pipeline_[0].valid = true;
+    pipeline_[0].product = product;
+    pipeline_[0].partial_sum = current_accumulator_;
 
     cycle_count_++;
     return result;

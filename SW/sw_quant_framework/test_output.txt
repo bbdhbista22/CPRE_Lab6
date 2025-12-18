@@ -1,0 +1,125 @@
+﻿
+Γòö========================================================================================Γòù
+Γòæ                                                                                        Γòæ
+Γòæ             COMPLETE HARDWARE ACCELERATOR PIPELINE - C++ & FPGA VERIFICATION           Γòæ
+Γòæ                  Includes: MAC Units, Dequantization, Output Storage                   Γòæ
+Γòæ                                                                                        Γòæ
+ΓòÜ========================================================================================Γò¥
+
+==========================================================================================
+STAGED MAC UNIT TEST - Hardware Pipeline Verification
+==========================================================================================
+
+Testing 3-stage pipeline:
+  Input: 5 multiply-accumulate operations
+  Expected: Pipeline fills (3 cycles latency), then 1 result/cycle
+
+Cycle |  Input | Weight |  Product |      Accum | Status
+--------------------------------------------------------------------------------
+    0 |     10 |      2 |       20 |          0 | (pipeline fill)
+    1 |     20 |      2 |       40 |         20 | (pipeline fill)
+    2 |     30 |      2 |       60 |         60 | (pipeline fill)
+    3 |     40 |      2 |       80 |        120 | (result valid)
+    4 |     50 |      2 |      100 |        200 | (result valid)
+
+Final accumulator (after flush): 300
+Expected (10+20+30+40+50)*2 = 300: Γ£ô PASS
+
+==========================================================================================
+COMPLETE HARDWARE ACCELERATOR PIPELINE TEST
+==========================================================================================
+
+Configuration:
+  Input:        64├ù64├ù3
+  Filters:      64├ù3├ù3
+  Output:       64├ù64├ù64
+  Scale factor: 0x800000 (Q8.24)
+  ReLU:         true
+
+Simulating complete pipeline for first 4 output pixels...
+
+DETAILED PIPELINE LOG:
+------------------------------------------------------------------------------------------
+
+First 50 pipeline operations (detailed log for FPGA comparison):
+
+[CYCLE 000000] MAC#0 input=0x00 weight=0xe0 -> accum=0x00000000
+[CYCLE 000001] MAC#0 input=0x01 weight=0xe1 -> accum=0x00000000
+[CYCLE 000002] MAC#0 input=0x02 weight=0xe2 -> accum=0x00000000
+[CYCLE 000003] MAC#0 input=0x00 weight=0xe3 -> accum=0xffffffe1
+[CYCLE 000004] MAC#0 input=0x01 weight=0xe4 -> accum=0xffffffa5
+[CYCLE 000005] MAC#0 input=0x02 weight=0xe5 -> accum=0xffffffa5
+[CYCLE 000006] MAC#0 input=0x00 weight=0xe6 -> accum=0xffffff89
+[CYCLE 000007] MAC#0 input=0x01 weight=0xe7 -> accum=0xffffff53
+[CYCLE 000008] MAC#0 input=0x02 weight=0xe8 -> accum=0xffffff53
+[CYCLE 000009] MAC#0 input=0x00 weight=0xe9 -> accum=0xffffff3a
+[CYCLE 000010] MAC#0 input=0x01 weight=0xea -> accum=0xffffff0a
+[CYCLE 000011] MAC#0 input=0x02 weight=0xeb -> accum=0xffffff0a
+[CYCLE 000012] MAC#0 input=0x00 weight=0xec -> accum=0xfffffef4
+[CYCLE 000013] MAC#0 input=0x01 weight=0xed -> accum=0xfffffeca
+[CYCLE 000014] MAC#0 input=0x02 weight=0xee -> accum=0xfffffeca
+[CYCLE 000015] MAC#0 input=0x03 weight=0xef -> accum=0xfffffeb7
+[CYCLE 000016] MAC#0 input=0x04 weight=0xf0 -> accum=0xfffffe93
+[CYCLE 000017] MAC#0 input=0x05 weight=0xf1 -> accum=0xfffffe60
+[CYCLE 000018] MAC#0 input=0x00 weight=0xf2 -> accum=0xfffffe20
+[CYCLE 000019] MAC#0 input=0x01 weight=0xf3 -> accum=0xfffffdd5
+[CYCLE 000020] MAC#0 input=0x02 weight=0xf4 -> accum=0xfffffdd5
+[CYCLE 000021] MAC#0 input=0x40 weight=0xf5 -> accum=0xfffffdc8
+[CYCLE 000022] MAC#0 input=0x41 weight=0xf6 -> accum=0xfffffdb0
+[CYCLE 000023] MAC#0 input=0x42 weight=0xf7 -> accum=0xfffffaf0
+[CYCLE 000024] MAC#0 input=0x43 weight=0xf8 -> accum=0xfffff866
+[CYCLE 000025] MAC#0 input=0x44 weight=0xf9 -> accum=0xfffff614
+[CYCLE 000026] MAC#0 input=0x45 weight=0xfa -> accum=0xfffff3fc
+[CYCLE 000026] DEQUANT input=0xfffff3fc scale=0x00800000 -> output=0x00
+[CYCLE 000026] STORE addr=0x000010 byte[0]=0x00
+[CYCLE 000026] DEQUANT input=0xfffff520 scale=0x00800000 -> output=0x00
+[CYCLE 000026] STORE addr=0x000010 byte[1]=0x00
+[CYCLE 000026] DEQUANT input=0xfffff644 scale=0x00800000 -> output=0x00
+[CYCLE 000026] STORE addr=0x000010 byte[2]=0x00
+[CYCLE 000026] DEQUANT input=0xfffff768 scale=0x00800000 -> output=0x00
+[CYCLE 000026] STORE addr=0x000010 byte[3]=0x00
+[CYCLE 000026] PIXEL_COMPLETE y=  0 x=  1 c= 1
+[CYCLE 000027] MAC#0 input=0x00 weight=0xfb -> accum=0xfffff220
+[CYCLE 000028] MAC#0 input=0x01 weight=0xfc -> accum=0xfffff082
+[CYCLE 000029] MAC#0 input=0x02 weight=0xfd -> accum=0xfffff082
+[CYCLE 000030] MAC#0 input=0x00 weight=0xfe -> accum=0xfffff07e
+[CYCLE 000031] MAC#0 input=0x01 weight=0xff -> accum=0xfffff078
+[CYCLE 000032] MAC#0 input=0x02 weight=0x00 -> accum=0xfffff078
+[CYCLE 000033] MAC#0 input=0x00 weight=0x01 -> accum=0xfffff077
+[CYCLE 000034] MAC#0 input=0x01 weight=0x02 -> accum=0xfffff077
+[CYCLE 000035] MAC#0 input=0x02 weight=0x03 -> accum=0xfffff077
+[CYCLE 000036] MAC#0 input=0x00 weight=0x04 -> accum=0xfffff079
+[CYCLE 000037] MAC#0 input=0x01 weight=0x05 -> accum=0xfffff07f
+[CYCLE 000038] MAC#0 input=0x02 weight=0x06 -> accum=0xfffff07f
+[CYCLE 000039] MAC#0 input=0x00 weight=0x07 -> accum=0xfffff084
+[CYCLE 000040] MAC#0 input=0x01 weight=0x08 -> accum=0xfffff090
+
+... (94 more operations) ...
+
+Last 10 operations:
+[CYCLE 000107] MAC#0 input=0x45 weight=0x0b -> accum=0xfffff7a3
+[CYCLE 000107] DEQUANT input=0xfffff7a3 scale=0x00800000 -> output=0x00
+[CYCLE 000107] STORE addr=0x000040 byte[0]=0x00
+[CYCLE 000107] DEQUANT input=0xfffffdce scale=0x00800000 -> output=0x00
+[CYCLE 000107] STORE addr=0x000040 byte[1]=0x00
+[CYCLE 000107] DEQUANT input=0x000003f9 scale=0x00800000 -> output=0x7f
+[CYCLE 000107] STORE addr=0x000040 byte[2]=0x7f
+[CYCLE 000107] DEQUANT input=0x00000a24 scale=0x00800000 -> output=0x7f
+[CYCLE 000107] STORE addr=0x000040 byte[3]=0x7f
+[CYCLE 000107] PIXEL_COMPLETE y=  0 x=  4 c= 0
+
+==========================================================================================
+PIPELINE SIMULATION SUMMARY
+==========================================================================================
+Total cycles executed:      108
+Total MACs processed:       108
+Pixels completed:           4
+Outputs generated:          16
+Accumulators created:       16
+
+Γ£ô Complete pipeline test PASSED
+
+
+==========================================================================================
+Γ£ô ALL TESTS PASSED - Ready for FPGA Integration
+==========================================================================================

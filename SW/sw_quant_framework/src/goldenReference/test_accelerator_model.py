@@ -129,7 +129,7 @@ class AcceleratorModel:
         print(f"    Output dimensions: {self.index_gen.conv_config['output_height']}x"
               f"{self.index_gen.conv_config['output_width']}x{self.conv_config['num_filters']}")
         
-        print("✓ Layer simulation complete")
+        print("[PASS] Layer simulation complete")
         return True
 
 
@@ -203,12 +203,12 @@ def test_accelerator_model():
     print()
     if success:
         print("=" * 70)
-        print("✓ AcceleratorModel test PASSED")
+        print("[PASS] AcceleratorModel test PASSED")
         print("=" * 70)
         return 0
     else:
         print("=" * 70)
-        print("✗ AcceleratorModel test FAILED")
+        print("[FAIL] AcceleratorModel test FAILED")
         print("=" * 70)
         return 1
 

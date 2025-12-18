@@ -79,7 +79,7 @@ class OutputStorage:
         }
     
     def pool_max2x2(self, values):
-        """2×2 max pooling"""
+        """2x2 max pooling"""
         if len(values) != 4:
             raise ValueError("Pooling requires exactly 4 values")
         return max(values)
@@ -94,7 +94,7 @@ class OutputStorage:
                 print(f"ERROR: Address out of bounds: 0x{addr:x} >= 0x{max_addr:x}")
                 return False
         
-        print("✓ Output storage address verification PASSED")
+        print("[PASS] Output storage address verification PASSED")
         print(f"  Total outputs: {num_outputs}")
         print(f"  BRAM words needed: {(num_outputs + 3) // 4}")
         return True
@@ -118,7 +118,7 @@ def test_basic_rmw():
     storage = OutputStorage(config)
     
     print("Configuration:")
-    print(f"  Output: {config['output_height']}×{config['output_width']}×{config['output_channels']}")
+    print(f"  Output: {config['output_height']}x{config['output_width']}x{config['output_channels']}")
     print(f"  Total elements: {config['output_height'] * config['output_width'] * config['output_channels']}")
     print()
     
@@ -141,7 +141,7 @@ def test_basic_rmw():
               f"0x{stats['word_addr']:06x} | {stats['byte_sel']:>4} | 0x{stats['new_word']:08x}")
     
     print()
-    print("✓ Basic RMW test PASSED")
+    print("[PASS] Basic RMW test PASSED")
     print()
     return True
 
@@ -187,16 +187,16 @@ def test_byte_packing():
     all_correct = True
     for i, expected in enumerate(values):
         extracted = storage.extract_byte(word, i)
-        match = "✓" if extracted == expected else "✗"
+        match = "[PASS]" if extracted == expected else "[FAIL]"
         print(f"{i:>4} | {expected:>8} | {extracted:>10} {match}")
         if extracted != expected:
             all_correct = False
     
     print()
     if all_correct:
-        print("✓ Byte packing test PASSED")
+        print("[PASS] Byte packing test PASSED")
     else:
-        print("✗ Byte packing test FAILED")
+        print("[FAIL] Byte packing test FAILED")
     
     print()
     return all_correct
@@ -219,10 +219,10 @@ def test_address_calculation():
     
     storage = OutputStorage(config)
     
-    # Total outputs: 64 × 64 × 64 = 262,144
+    # Total outputs: 64 x 64 x 64 = 262,144
     # BRAM words needed: 262,144 / 4 = 65,536
     
-    print(f"Output dimensions: {config['output_height']}×{config['output_width']}×{config['output_channels']}")
+    print(f"Output dimensions: {config['output_height']}x{config['output_width']}x{config['output_channels']}")
     print(f"Total elements: {config['output_height'] * config['output_width'] * config['output_channels']}")
     print(f"BRAM words: {(config['output_height'] * config['output_width'] * config['output_channels'] + 3) // 4}")
     print()
@@ -244,7 +244,7 @@ def test_address_calculation():
         print(f"{out_y:>3} | {out_x:>3} | {out_c:>3} | {linear_addr:>12} | 0x{word_addr:08x} | {byte_sel:>4}")
     
     print()
-    print("✓ Address calculation test PASSED")
+    print("[PASS] Address calculation test PASSED")
     print()
     return True
 
@@ -287,15 +287,15 @@ def test_streaming():
                   f"{result['byte_sel']:>2} | {tid:>2} | 0x{result['word_addr']:06x}")
     
     print()
-    print("✓ Streaming test PASSED")
+    print("[PASS] Streaming test PASSED")
     print()
     return True
 
 
 def test_max_pooling():
-    """Test 2×2 max pooling"""
+    """Test 2x2 max pooling"""
     print("=" * 70)
-    print("OutputStorage Test - 2×2 Max Pooling")
+    print("OutputStorage Test - 2x2 Max Pooling")
     print("=" * 70)
     print()
     
@@ -322,16 +322,16 @@ def test_max_pooling():
     all_pass = True
     for values, expected in test_cases:
         result = storage.pool_max2x2(values)
-        status = "✓ PASS" if result == expected else "✗ FAIL"
+        status = "[PASS] PASS" if result == expected else "[FAIL] FAIL"
         if result != expected:
             all_pass = False
         print(f"[{values[0]:>3}, {values[1]:>3}, {values[2]:>3}, {values[3]:>3}] | {expected:>13} | {result:>6} | {status}")
     
     print()
     if all_pass:
-        print("✓ Max pooling test PASSED")
+        print("[PASS] Max pooling test PASSED")
     else:
-        print("✗ Max pooling test FAILED")
+        print("[FAIL] Max pooling test FAILED")
     
     print()
     return all_pass
@@ -339,12 +339,12 @@ def test_max_pooling():
 
 def main():
     print()
-    print("╔" + "=" * 68 + "╗")
-    print("║" + " " * 68 + "║")
-    print("║" + " OutputStorage Reference Implementation Test ".center(68) + "║")
-    print("║" + " BRAM Read-Modify-Write & Max Pooling ".center(68) + "║")
-    print("║" + " " * 68 + "║")
-    print("╚" + "=" * 68 + "╝")
+    print("+" + "=" * 68 + "+")
+    print("|" + " " * 68 + "|")
+    print("|" + " OutputStorage Reference Implementation Test ".center(68) + "|")
+    print("|" + " BRAM Read-Modify-Write & Max Pooling ".center(68) + "|")
+    print("|" + " " * 68 + "|")
+    print("+" + "=" * 68 + "+")
     print()
     
     all_pass = True
@@ -358,10 +358,10 @@ def main():
     print()
     print("=" * 70)
     if all_pass:
-        print("✓ All OutputStorage tests PASSED!")
+        print("[PASS] All OutputStorage tests PASSED!")
         return 0
     else:
-        print("✗ Some tests FAILED")
+        print("[FAIL] Some tests FAILED")
         return 1
 
 

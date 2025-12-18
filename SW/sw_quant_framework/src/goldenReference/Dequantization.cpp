@@ -60,8 +60,9 @@ Dequantization::OutputStats Dequantization::dequantizePipelined(int32_t accumula
     
     // Stage 2: Multiply by scale factor (fixed-point Q8.24)
     // Note: scale_factor is Q8.24, so result is (value * scale) >> 24
+    // Add 0x00800000 (0.5 in Q8.24) before shifting to round
     int64_t temp = (int64_t)stats.accum_after_zp * config_.scale_factor;
-    stats.product = (int32_t)(temp >> 24);
+    stats.product = (int32_t)((temp + 0x00800000) >> 24);
     
     // Stage 3: Round (already done in fixed-point multiply above)
     // But we can separate it for clarity:

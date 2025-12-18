@@ -3,7 +3,6 @@
 
 #include <cstdint>
 #include <vector>
-#include <struct.h>
 
 /**
  * IndexGenerator - C++ Reference Implementation

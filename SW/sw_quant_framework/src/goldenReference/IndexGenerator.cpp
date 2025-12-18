@@ -35,8 +35,8 @@ IndexGenerator::IndexGenerator(const ConvConfig& config,
 
     // Compute tiling configuration
     tile_config_.tile_size = tile_size;
-    tile_config_.tiles_per_row = (config.output_width + tile_size - 1) / tile_size;  // ceil division
-    tile_config_.tiles_per_col = (config.output_height + tile_size - 1) / tile_size;
+    tile_config_.tiles_per_row = (conv_config_.output_width + tile_size - 1) / tile_size;  // ceil division
+    tile_config_.tiles_per_col = (conv_config_.output_height + tile_size - 1) / tile_size;
     tile_config_.total_tiles = tile_config_.tiles_per_row * tile_config_.tiles_per_col;
 }
 
@@ -157,8 +157,8 @@ std::vector<IndexGenerator::Address> IndexGenerator::generateAllAddresses() {
                                 for (uint8_t ic = 0; ic < input_channels; ic++) {
                                     
                                     // Calculate input position (handles padding)
-                                    uint16_t in_y, in_x;
-                                    bool valid = calcInputPosition(actual_out_y, actual_out_x, fy, fx, in_y, in_x);
+                                    uint16_t in_y = 0, in_x = 0;
+                                    calcInputPosition(actual_out_y, actual_out_x, fy, fx, in_y, in_x);
 
                                     // Always generate address (for padding regions, input reads zero from BRAM initialization)
                                     uint32_t input_addr = calcInputAddr(in_y, in_x, ic);
