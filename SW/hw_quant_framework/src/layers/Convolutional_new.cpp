@@ -505,7 +505,7 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
         }
         
         fp32 Sw = 127.0f / max_weight;
-        logDebug("Weight scale Sw = " + std::to_string(Sw) + " (max_weight = " + std::to_string(max_weight) + ")");
+        // logDebug("Weight scale Sw = " + std::to_string(Sw) + " (max_weight = " + std::to_string(max_weight) + ")");
         
         // -------------------------
         // 3.2: Use PRE-CALCULATED INPUT SCALE (Si) and ZERO POINT (zi)
@@ -514,14 +514,14 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
         fp32 Si = input_stats.Si;
         i8 zi = input_stats.zi;
         
-        logDebug("Using calibrated input scale Si = " + std::to_string(Si) + 
-                ", zero point zi = " + std::to_string(static_cast<int>(zi)));
+        // logDebug("Using calibrated input scale Si = " + std::to_string(Si) + 
+        //         ", zero point zi = " + std::to_string(static_cast<int>(zi)));
         
         // -------------------------
         // 3.3: Calculate BIAS SCALE (Sb)
         // -------------------------
         fp32 Sb = Si * Sw;
-        logDebug("Bias scale Sb = " + std::to_string(Sb));
+        // logDebug("Bias scale Sb = " + std::to_string(Sb));
         
         // ==========================================================================
         // SECTION 4: QUANTIZE ALL INPUTS (BEFORE CONVOLUTION LOOPS)
@@ -539,7 +539,7 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
                 static_cast<i8>(std::max<i32>(-128, std::min<i32>(127, temp)));
         }
         
-        logDebug("Quantized " + std::to_string(input_size) + " input values to int8");
+        // logDebug("Quantized " + std::to_string(input_size) + " input values to int8");
         
         // ==========================================================================
         // SECTION 5: QUANTIZE ALL WEIGHTS (BEFORE CONVOLUTION LOOPS)
@@ -556,7 +556,7 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
                 static_cast<i8>(std::max<i32>(-128, std::min<i32>(127, temp)));
         }
         
-        logDebug("Quantized " + std::to_string(weight_size) + " weight values to int8");
+        // logDebug("Quantized " + std::to_string(weight_size) + " weight values to int8");
         
         // ==========================================================================
         // SECTION 6: QUANTIZE ALL BIASES (BEFORE CONVOLUTION LOOPS)
@@ -572,7 +572,7 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
             quantized_biases[m] = static_cast<i32>(std::round(Sb * getBiasData().get<fp32>(m)));
         }
         
-        logDebug("Quantized " + std::to_string(bias_size) + " bias values to int32");
+        // logDebug("Quantized " + std::to_string(bias_size) + " bias values to int32");
         
         // ==========================================================================
         // SECTION 7: MAIN CONVOLUTION LOOP (SAME STRUCTURE AS LAB 2!)
@@ -583,7 +583,7 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
         //   3. We dequantize at the end to get fp32 output
         // ==========================================================================
         
-        logDebug("Starting convolution loops...");
+        // logDebug("Starting convolution loops...");
         
         // Triple nested loop over output positions (SAME as Lab 2)
         for (size_t p = 0; p < P; p++)         // For each output row
@@ -596,6 +596,12 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
                     if (hardware_enabled) {
                         mac_pairs.clear();
                     }
+                    
+                    // Progress Indicator
+                    // static int progress_cnt = 0;
+                    // if (++progress_cnt % 2000 == 0) {
+                    //     std::cout << "." << std::flush;
+                    // }
                     
                     for (size_t c = 0; c < C; c++)     // For each input channel
                     {
@@ -690,11 +696,11 @@ void ConvolutionalLayer::computeQuantizedInternal(const LayerData &dataIn, bool 
         output_avg /= output_size;
         
         logInfo("Layer " + current_layer_name + " quantized convolution complete\n"); // Extra newline for readability
-        logDebug("Output statistics - Min: " + std::to_string(output_min) + 
-                ", Max: " + std::to_string(output_max) + 
-                ", Avg: " + std::to_string(output_avg));
-        logDebug("Zero outputs: " + std::to_string(zero_count) + "/" + std::to_string(output_size) + 
-                " (" + std::to_string(100.0f * zero_count / output_size) + "%)");
+        // logDebug("Output statistics - Min: " + std::to_string(output_min) + 
+        //         ", Max: " + std::to_string(output_max) + 
+        //         ", Avg: " + std::to_string(output_avg));
+        // logDebug("Zero outputs: " + std::to_string(zero_count) + "/" + std::to_string(output_size) + 
+        //         " (" + std::to_string(100.0f * zero_count / output_size) + "%)");
     }
     
     // ==========================================================================

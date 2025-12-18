@@ -639,8 +639,8 @@ void runAcceleratedInferenceTest(const Model& model, const Path& basePath) {
     logInfo("\n--- Running ACCELERATED Inference Test ---");
 
     // Explicitly reset calibration state to ensure identical behavior with QUANTIZED mode
-    // resetConvLayerCounter();
-    // resetDenseLayerCounter();
+    resetConvLayerCounter();
+    resetDenseLayerCounter();
     setCalibrationMode(true);
     setDenseCalibrationMode(true);
 
@@ -649,7 +649,8 @@ void runAcceleratedInferenceTest(const Model& model, const Path& basePath) {
 
     Timer timer("Accelerated Full Inference");
     timer.start();
-    const LayerData& accelOutput = model.inference(img, Layer::InfType::ACCELERATED);
+    // Use deep copy to preserve results before running Quantized inference
+    LayerData accelOutput = model.inference(img, Layer::InfType::ACCELERATED);
     timer.stop();
 
     try {
@@ -662,6 +663,9 @@ void runAcceleratedInferenceTest(const Model& model, const Path& basePath) {
         std::cout << "Accelerated inference comparison failed: " << e.what() << std::endl;
     }
 
+    // Reset again for Quantized run
+    resetConvLayerCounter();
+    resetDenseLayerCounter();
     const LayerData& quantizedOutput = model.inference(img, Layer::InfType::QUANTIZED);
     std::cout << "ACCELERATED vs QUANTIZED: ";
     accelOutput.compareWithinPrint<fp32>(quantizedOutput);

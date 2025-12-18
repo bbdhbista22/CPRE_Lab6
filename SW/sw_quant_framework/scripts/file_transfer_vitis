@@ -2,5 +2,5 @@
 
 # This script runs a simple SD card file transfer protocol
 [ ! -e workspace_file_transfer ] && \
-  ./scripts/create_vitis -xsa_path scripts/test_hardware.xsa -source_dir scripts/file_transfer -workspace_dir workspace_file_transfer
-./scripts/flash_vitis -xsa_path scripts/test_hardware.xsa -source_dir scripts/file_transfer -workspace_dir workspace_file_transfer
+  ./scripts/create_vitis -xsa_path ../hw_quant_framework/staged_mac_bd_wrapper.xsa -source_dir scripts/file_transfer -workspace_dir workspace_file_transfer
+./scripts/flash_vitis -xsa_path ../hw_quant_framework/staged_mac_bd_wrapper.xsa -source_dir scripts/file_transfer -workspace_dir workspace_file_transfer

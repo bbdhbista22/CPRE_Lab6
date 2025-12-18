@@ -22,16 +22,17 @@ EXE_DEBUG = $(BIN)/ml_debug
 # else # Linux
 	CC_LINUX = g++ 
 	CC_WIN = x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -fstack-protector
-	CC_ALL = -lstdc++ -Wall -Werror -pedantic -std=c++11
+	CC_ALL = -Wall -Werror -pedantic -std=c++11
 	CC_DEBUG = -g -Og
-	CC_OPT_FLAGS = -O3 -fno-tree-pre
+	CC_OPT_FLAGS = -O3
 	CC_SIMD_FLAGS = -march=native
 	CC_FLAGS = $(CC_ALL) $(CC_OPT_FLAGS) $(if $(filter $(SIMD), true), $(CC_SIMD_FLAGS),)
 	CC_DEBUG_FLAGS = $(CC_ALL) $(CC_DEBUG) $(if $(filter $(SIMD), true), $(CC_SIMD_FLAGS),)
 
 # Libs
 # CC_FLAGS_END += -pthread -lfmt
-CC_FLAGS_END += -pthread
+# CC_FLAGS_END += -pthread
+CC_FLAGS_END += -pthread -lstdc++
 
 #	Check if GCC is version 9 or greater, and if not, include an additional flag for the filesystem lib
 #	ifeq "$(GCCVERSIONLTQ9)" "1"

@@ -18,6 +18,11 @@ class Model {
     const LayerData& inference(const LayerData& inData, const Layer::InfType infType = Layer::InfType::NAIVE) const;
     const LayerData& inferenceLayer(const LayerData& inData, const int layerNum, const Layer::InfType infType = Layer::InfType::NAIVE) const;
 
+    // Generate calibration statistics by running naive inference
+    void generateCalibration(const LayerData& inData, const std::string& outPath) const;
+
+    // Internal memory management
+
     // Internal memory management
     // Allocate the internal output buffers for each layer in the model
     inline void allocLayers();
