@@ -33,7 +33,7 @@ StagedMAC::MACResult StagedMAC::executeCycle(int8_t input, int8_t weight, bool s
     result.valid = pipeline_[2].valid;
     result.accumulator = current_accumulator_;
 
-    // Move Stage 1 → Stage 2
+    // Move Stage 1 -> Stage 2
     pipeline_[2] = pipeline_[1];
 
     // Accumulate at Stage 1: if Stage 0 has valid data, accumulate its product

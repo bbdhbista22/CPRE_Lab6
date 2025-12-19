@@ -98,7 +98,7 @@ public:
      * Optional: Apply 2X2 max pooling
      * 
      * Reduces output spatial dimensions by 2X:
-     * - 4 input pixels (2X2 neighborhood) → 1 output pixel
+     * - 4 input pixels (2X2 neighborhood) -> 1 output pixel
      * - Only writes output when all 4 inputs received
      * 
      * @param values Vector of 4 int8 values

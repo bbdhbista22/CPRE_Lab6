@@ -309,7 +309,7 @@ namespace ML
         // Behavior implemented below:
         // - If use_dense_layer_specific_calibration is true OR this is the final
         //   classification layer (outputSize == 200) then we compute adaptive
-        //   input statistics at runtime (min/max → Si, zi). This path also
+        //   input statistics at runtime (min/max -> Si, zi). This path also
         //   increments dense_layer_count and is logged as "ADAPTIVE".
         // - Otherwise (individual layer test mode) we use precomputed "_input"
         //   calibration stats from dense_calibration_data (Si, zi).

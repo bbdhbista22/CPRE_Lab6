@@ -9,7 +9,7 @@
 
 /**
  * Complete Hardware Accelerator Pipeline Test
- * Includes: MAC Units → Dequantization → Output Storage
+ * Includes: MAC Units -> Dequantization -> Output Storage
  */
 
 struct VerboseLogger {

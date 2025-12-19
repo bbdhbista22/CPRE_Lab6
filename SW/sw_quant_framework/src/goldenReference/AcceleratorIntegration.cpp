@@ -125,7 +125,7 @@ public:
         std::cout << std::endl;
         std::cout << "╔═══════════════════════════════════════════════════════════════════════════╗" << std::endl;
         std::cout << "║        HARDWARE ACCELERATOR INTEGRATION TEST - C++ SIMULATION              ║" << std::endl;
-        std::cout << "║  IndexGenerator → StagedMAC (4x) → Dequantization → OutputStorage          ║" << std::endl;
+        std::cout << "║  IndexGenerator -> StagedMAC (4x) -> Dequantization -> OutputStorage          ║" << std::endl;
         std::cout << "╚═══════════════════════════════════════════════════════════════════════════╝" << std::endl;
         std::cout << std::endl;
         

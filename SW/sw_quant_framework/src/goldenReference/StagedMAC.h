@@ -13,7 +13,7 @@
  * Stage 3: Register (output to next stage)
  * 
  * Throughput: 1 MAC per cycle (after pipeline fill)
- * Latency: 3 cycles (multiply → accumulate → register)
+ * Latency: 3 cycles (multiply -> accumulate -> register)
  * 
  * This matches the Lab 3 staged_mac FPGA implementation.
  */

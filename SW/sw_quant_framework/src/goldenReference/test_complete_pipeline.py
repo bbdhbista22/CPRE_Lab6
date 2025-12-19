@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Complete Hardware Accelerator Pipeline Test
-Includes: MAC Units → Dequantization → Output Storage
+Includes: MAC Units -> Dequantization -> Output Storage
 With verbose hardware-comparable output for FPGA verification
 """
 
@@ -140,7 +140,7 @@ class VerboseLogger:
 
 
 def test_complete_pipeline():
-    """Test complete pipeline: MAC → Dequant → Output Storage"""
+    """Test complete pipeline: MAC -> Dequant -> Output Storage"""
     print("=" * 90)
     print("COMPLETE HARDWARE ACCELERATOR PIPELINE TEST")
     print("=" * 90)

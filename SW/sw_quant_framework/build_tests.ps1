@@ -47,15 +47,15 @@ if ($Test -eq "index_generator") {
     & g++ -std=c++11 -Wall -O2 -I$SrcDir -I$TestsDir @sourceFiles -o $output
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "`n✓ Compiled successfully" -ForegroundColor Green
+        Write-Host "`nCompiled successfully" -ForegroundColor Green
         Write-Host "`nRunning test..." -ForegroundColor Cyan
         Write-Host "========================================" -ForegroundColor Gray
         & $output
         Write-Host "========================================" -ForegroundColor Gray
-        Write-Host "`n✓ Test complete" -ForegroundColor Green
+        Write-Host "`nTest complete" -ForegroundColor Green
     }
     else {
-        Write-Host "✗ Compilation failed" -ForegroundColor Red
+        Write-Host " Compilation failed" -ForegroundColor Red
         exit 1
     }
 }
@@ -74,15 +74,15 @@ elseif ($Test -eq "accelerator_model") {
     & g++ -std=c++11 -Wall -O2 -I$SrcDir -I$TestsDir @sourceFiles -o $output
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "`n✓ Compiled successfully" -ForegroundColor Green
+        Write-Host "`nCompiled successfully" -ForegroundColor Green
         Write-Host "`nRunning test..." -ForegroundColor Cyan
         Write-Host "========================================" -ForegroundColor Gray
         & $output
         Write-Host "========================================" -ForegroundColor Gray
-        Write-Host "`n✓ Test complete" -ForegroundColor Green
+        Write-Host "`nTest complete" -ForegroundColor Green
     }
     else {
-        Write-Host "✗ Compilation failed" -ForegroundColor Red
+        Write-Host " Compilation failed" -ForegroundColor Red
         exit 1
     }
 }
@@ -103,15 +103,15 @@ elseif ($Test -eq "complete_pipeline") {
     & g++ -std=c++11 -Wall -O2 -I$SrcDir -I$TestsDir @sourceFiles -o $output
     
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "`n✓ Compiled successfully" -ForegroundColor Green
+        Write-Host "`nCompiled successfully" -ForegroundColor Green
         Write-Host "`nRunning test..." -ForegroundColor Cyan
         Write-Host "========================================" -ForegroundColor Gray
         & $output
         Write-Host "========================================" -ForegroundColor Gray
-        Write-Host "`n✓ Test complete" -ForegroundColor Green
+        Write-Host "`nTest complete" -ForegroundColor Green
     }
     else {
-        Write-Host "✗ Compilation failed" -ForegroundColor Red
+        Write-Host " Compilation failed" -ForegroundColor Red
         exit 1
     }
 }
