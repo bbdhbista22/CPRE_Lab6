@@ -135,7 +135,7 @@ OutputStorage::BRAMUpdate OutputStorage::processStream(int8_t tdata, uint8_t tid
 }
 
 /**
- * 2×2 max pooling
+ * 2X2 max pooling
  */
 int8_t OutputStorage::poolMax2x2(const std::vector<int8_t>& values) {
     if (values.size() != 4) {

@@ -123,7 +123,7 @@ int testCompletePipeline() {
         Dequantization dequant(quant_config);
         OutputStorage output_storage(output_config);
 
-        // Generate first 108 MACs (4 pixels × 27 MACs/pixel)
+        // Generate first 108 MACs (4 pixels X 27 MACs/pixel)
         std::cout << "Simulating complete pipeline for first 4 output pixels...\n\n";
 
         std::vector<IndexGenerator::Address> addresses = index_gen.generateFirstN(108);

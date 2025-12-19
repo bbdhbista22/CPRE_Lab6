@@ -43,9 +43,9 @@ int main() {
                                 * gen.getConvConfig().macs_per_pixel;
         
         std::cout << "Expected total MACs: " << expected_macs << "\n";
-        std::cout << "  = " << gen.getConvConfig().output_height << " × " 
-                  << gen.getConvConfig().output_width << " × " 
-                  << (int)config.num_filters << " × " 
+        std::cout << "  = " << gen.getConvConfig().output_height << " X " 
+                  << gen.getConvConfig().output_width << " X " 
+                  << (int)config.num_filters << " X " 
                   << gen.getConvConfig().macs_per_pixel << "\n";
         std::cout << "  = " << expected_macs << " (should be 7,077,888)\n\n";
 

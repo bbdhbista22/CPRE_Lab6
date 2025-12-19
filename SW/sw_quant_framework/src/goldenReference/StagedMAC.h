@@ -8,7 +8,7 @@
  * StagedMAC - C++ Reference Implementation
  * 
  * 3-stage pipelined multiply-accumulate unit:
- * Stage 1: Multiply (input × weight)
+ * Stage 1: Multiply (input X weight)
  * Stage 2: Accumulate (partial_sum + product)
  * Stage 3: Register (output to next stage)
  * 
@@ -59,7 +59,7 @@ public:
      * Execute single MAC operation with pipelining
      * 
      * Pipeline stages:
-     * 1. MULTIPLY: partial_sum_in = previous_sum; product = (input - zp_in) × (weight - zp_w)
+     * 1. MULTIPLY: partial_sum_in = previous_sum; product = (input - zp_in) X (weight - zp_w)
      * 2. ACCUMULATE: accum = product + partial_sum_in
      * 3. REGISTER: hold accumulator for output
      * 

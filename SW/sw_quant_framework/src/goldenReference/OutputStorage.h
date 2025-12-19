@@ -10,7 +10,7 @@
  * 
  * Handles writing quantized int8 outputs to BRAM with read-modify-write semantics.
  * Implements 32-bit word packing (4 int8 values per word) for efficient BRAM usage.
- * Optional 2×2 max pooling support.
+ * Optional 2X2 max pooling support.
  * 
  * This class serves as a golden reference for VHDL hardware validation.
  */
@@ -24,7 +24,7 @@ public:
         uint16_t output_width;    ///< Output tensor width (pixels)
         uint16_t output_channels; ///< Output tensor channels (depth)
         
-        bool enable_pooling;      ///< Enable 2×2 max pooling
+        bool enable_pooling;      ///< Enable 2X2 max pooling
         uint32_t output_base_addr; ///< Base address in BRAM for output buffer
     };
 
@@ -95,10 +95,10 @@ public:
                             OutputStats* stats = nullptr);
 
     /**
-     * Optional: Apply 2×2 max pooling
+     * Optional: Apply 2X2 max pooling
      * 
-     * Reduces output spatial dimensions by 2×:
-     * - 4 input pixels (2×2 neighborhood) → 1 output pixel
+     * Reduces output spatial dimensions by 2X:
+     * - 4 input pixels (2X2 neighborhood) → 1 output pixel
      * - Only writes output when all 4 inputs received
      * 
      * @param values Vector of 4 int8 values

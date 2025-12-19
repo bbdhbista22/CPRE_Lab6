@@ -20,7 +20,7 @@ void Dequantization::setQuantParams(int32_t zero_point_in,
 }
 
 /**
- * Fixed-point multiply: (value × scale_factor) >> 24
+ * Fixed-point multiply: (value X scale_factor) >> 24
  * 
  * scale_factor is in Q8.24 format (8 integer bits + 24 fractional bits)
  * Example: 0x01000000 = 1.0 in Q8.24

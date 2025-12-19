@@ -54,7 +54,7 @@ public:
      * 
      * Pipeline stages:
      * 1. Subtract zero-point: accum' = accum - zero_point_in
-     * 2. Multiply by scale: product = accum' × scale_factor (Q8.24 fixed-point)
+     * 2. Multiply by scale: product = accum' X scale_factor (Q8.24 fixed-point)
      *    Note: scale_factor is in Q8.24, so result is (value << 24) / scale_factor
      * 3. Round to nearest: rounded = (product + 0.5) >> 24
      * 4. Apply ReLU: if enable_relu && rounded < 0: rounded = 0
@@ -104,7 +104,7 @@ private:
     Config config_;
 
     /**
-     * Fixed-point multiply: (value × scale_factor) >> 24
+     * Fixed-point multiply: (value X scale_factor) >> 24
      * 
      * scale_factor is in Q8.24 format (signed 32-bit with 24 fractional bits)
      * Example: scale_factor = 0x0100000 means 1.0 in Q8.24

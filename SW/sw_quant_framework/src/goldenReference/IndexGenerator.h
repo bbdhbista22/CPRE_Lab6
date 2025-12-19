@@ -81,7 +81,7 @@ public:
      * 
      * Each Address represents one multiply-accumulate (MAC) operation.
      * TLAST is asserted when ic == input_channels-1 AND fx == filter_width-1 AND fy == filter_height-1
-     * (on the LAST MAC of each output pixel), which occurs every (filter_height × filter_width × input_channels) MACs
+     * (on the LAST MAC of each output pixel), which occurs every (filter_height X filter_width X input_channels) MACs
      * 
      * @return Vector of addresses in execution order
      */
