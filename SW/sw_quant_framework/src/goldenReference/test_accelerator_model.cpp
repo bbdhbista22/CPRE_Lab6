@@ -167,7 +167,7 @@ int main() {
             return 0;
         } else {
             std::cout << "\n" << "=" << std::string(68, '=') << "\n";
-            std::cout << "✗ AcceleratorModel test FAILED\n";
+            std::cout << " AcceleratorModel test FAILED\n";
             std::cout << "=" << std::string(68, '=') << "\n";
             return 1;
         }
