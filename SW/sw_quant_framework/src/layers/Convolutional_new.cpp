@@ -224,7 +224,7 @@ namespace ML
     // ==========================================================================
     // LAB 2: NAIVE CONVOLUTION (Baseline - No Quantization)
     // ==========================================================================
-    // This is your working Lab 2 implementation
+    // This is our working Lab 2 implementation
     // It performs convolution using 32-bit floating point (fp32) arithmetic
     // ==========================================================================
 
