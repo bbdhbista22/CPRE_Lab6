@@ -125,7 +125,7 @@ public:
         std::cout << std::endl;
         std::cout << "╔═══════════════════════════════════════════════════════════════════════════╗" << std::endl;
         std::cout << "║        HARDWARE ACCELERATOR INTEGRATION TEST - C++ SIMULATION              ║" << std::endl;
-        std::cout << "║  IndexGenerator → StagedMAC (4×) → Dequantization → OutputStorage          ║" << std::endl;
+        std::cout << "║  IndexGenerator → StagedMAC (4x) → Dequantization → OutputStorage          ║" << std::endl;
         std::cout << "╚═══════════════════════════════════════════════════════════════════════════╝" << std::endl;
         std::cout << std::endl;
         
@@ -221,13 +221,13 @@ private:
     
     void print_configuration() {
         std::cout << "Configuration:" << std::endl;
-        std::cout << "  Input shape:       " << conv_config.input_height << "×"
-                 << conv_config.input_width << "×" << conv_config.input_channels << std::endl;
-        std::cout << "  Filter shape:      " << conv_config.num_filters << "×"
-                 << conv_config.filter_height << "×" << conv_config.filter_width
-                 << "×" << conv_config.input_channels << std::endl;
-        std::cout << "  Output shape:      " << output_config.output_height << "×"
-                 << output_config.output_width << "×" << output_config.output_channels << std::endl;
+        std::cout << "  Input shape:       " << conv_config.input_height << "x"
+                 << conv_config.input_width << "x" << conv_config.input_channels << std::endl;
+        std::cout << "  Filter shape:      " << conv_config.num_filters << "x"
+                 << conv_config.filter_height << "x" << conv_config.filter_width
+                 << "x" << conv_config.input_channels << std::endl;
+        std::cout << "  Output shape:      " << output_config.output_height << "x"
+                 << output_config.output_width << "x" << output_config.output_channels << std::endl;
         std::cout << "  Quantization:      int8, Q8.24" << std::endl;
         std::cout << "  Scale factor:      0x" << std::hex << std::setfill('0') 
                  << std::setw(8) << quant_config.scale_factor << std::dec << std::endl;
@@ -268,7 +268,7 @@ int main() {
     try {
         AcceleratorIntegration accelerator;
         
-        // Run simulation for first 108 MACs (4 pixels × 27 MACs/pixel)
+        // Run simulation for first 108 MACs (4 pixels x 27 MACs/pixel)
         accelerator.run_simulation(108);
         
         return 0;
